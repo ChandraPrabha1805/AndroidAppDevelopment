@@ -172,7 +172,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Manual Testing"
+                    android:text="Buy a Course"
                     android:textAlignment="center"
                     android:textColor="@color/cardview_dark_background"
                     android:textSize="20sp"
@@ -213,7 +213,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Api Testing"
+                    android:text="Order Detail"
                     android:textAlignment="center"
                     android:textColor="@color/cardview_dark_background"
                     android:textSize="20sp"
