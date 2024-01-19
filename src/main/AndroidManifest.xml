@@ -13,6 +13,12 @@
         android:theme="@style/Theme.OmGaneshayNamaNew"
         tools:targetApi="31">
         <activity
+            android:name=".BuyACourseDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BuyACourseActivity"
+            android:exported="false" />
+        <activity
             android:name=".TopicDetailActivity"
             android:exported="false" />
         <activity

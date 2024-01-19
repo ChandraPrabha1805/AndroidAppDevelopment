@@ -13,6 +13,12 @@
         android:text="TextView"
         android:textColor="@color/cardview_light_background"
         android:textSize="16dp"/>
-
+    <TextView
+        android:id="@+id/textline_b"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/cardview_light_background"
+        android:textSize="16dp"/>
 
 </LinearLayout>

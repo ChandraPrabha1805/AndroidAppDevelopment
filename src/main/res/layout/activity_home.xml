@@ -144,7 +144,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardManualTesting"
+            android:id="@+id/cardBuyACourse"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="1"
@@ -185,7 +185,7 @@
             </LinearLayout>
         </androidx.cardview.widget.CardView>
         <androidx.cardview.widget.CardView
-            android:id="@+id/cardApiTesting"
+            android:id="@+id/cardOrderDetail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_row="2"

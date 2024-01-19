@@ -37,8 +37,16 @@ public class HomeActivity extends AppCompatActivity {
                     SharedPreferences.Editor editor = sharedPreferences.edit();
                     startActivity(new Intent(HomeActivity.this, JavaActivity.class));
                 }
-        });
+            });
+                CardView buyACourse=findViewById(R.id.cardBuyACourse);
+                buyACourse.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        startActivity(new Intent(HomeActivity.this, BuyACourseActivity.class));
+                    }
 
+                });
 
     }
 }
