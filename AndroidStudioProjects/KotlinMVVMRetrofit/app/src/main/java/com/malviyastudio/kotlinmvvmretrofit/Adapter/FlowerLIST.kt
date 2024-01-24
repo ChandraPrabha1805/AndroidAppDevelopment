@@ -10,37 +10,40 @@ import androidx.recyclerview.widget.RecyclerView
 import com.malviyastudio.kotlinmvvmretrofit.Model.FlowerModel
 import com.malviyastudio.kotlinmvvmretrofit.R
 import com.squareup.picasso.Picasso
-import java.security.AccessControlContext
 
-class FlowerLIST (var context: Context,var flowerModelList: MutableList<FlowerModel>):
+class FlowerLIST(var context: Context, var flowerModelList: List<FlowerModel>):
 RecyclerView.Adapter<FlowerLIST.MyViewModel>()
 {
    inner class MyViewModel(itemView: View):RecyclerView.ViewHolder(itemView)
     {
-     var image:ImageView
-     var flowerName:TextView
-     var flowerclr:TextView
+        var image: ImageView
+        var flowerName: TextView
+        var flowerOrder: TextView
+        var flowerTag: TextView
 
-     init {
-         flowerclr=itemView.findViewById(R.id.flowerclr)
-         flowerName=itemView.findViewById(R.id.flowerName)
-         image=itemView.findViewById(R.id.image)
 
-     }
+        init {
+            image = itemView.findViewById(R.id.image)
+            flowerName = itemView.findViewById(R.id.flowerName)
+            flowerOrder = itemView.findViewById(R.id.flowerOrder)
+            flowerTag = itemView.findViewById(R.id.flowerTag)
+        }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewModel {
         return MyViewModel(LayoutInflater.from(context).inflate(R.layout.layout_flower_list,parent,false))
     }
 
-    override fun getItemCount(): Int {
-return flowerModelList.size  }
-
     override fun onBindViewHolder(holder: MyViewModel, position: Int) {
-        Picasso.get().load(flowerModelList[position].imgurl).into(holder.image)
-        holder.flowerName.text=flowerModelList[position].name
-        holder.flowerclr.text=flowerModelList[position].tag
-
+        val flower = flowerModelList[position]
+        Picasso.get().load(flower.imgurl).into(holder.image)
+        // Set text for other views
+        holder.flowerName.text = flower.name
+        holder.flowerOrder.text = flower.order
+        holder.flowerTag.text = flower.tag
 
     }
-}
+    override fun getItemCount(): Int {
+    return flowerModelList.size  }
+
+    }
